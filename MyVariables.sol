@@ -2,7 +2,7 @@
 
 pragma solidity ^0.8.0;
 
-/// @title Data Types
+/// @title Variables
 /// @author kabir Kapoor
 contract MyVariables {
     uint256 public number = 20;       // State variable
