@@ -6,7 +6,7 @@ pragma solidity ^0.8.0;
 /// @author kabir Kapoor
 contract MyVariables {
     uint256 public number = 20;       // State variable
-    bool pause = true;         // State variable
+    bool private pause = true;         // State variable
     uint256 time = block.timestamp;  // state variable saving a global variable
 
     function myFunc() public view {
@@ -19,5 +19,6 @@ contract MyVariables {
 
 contract INeedVariable is MyVariables {
     uint256 public newVar = 50;
-
+    bool public pause = false; // it is not giving error bcz pause in line no 9 pause is private that has a scope till MyVariables contract only
+    uint256 public newTime = time; // time in MyVariables contract was internal so it was accessed by INeedVariable contract
 }
